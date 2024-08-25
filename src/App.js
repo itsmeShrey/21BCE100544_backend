@@ -24,7 +24,7 @@ const App = () => {
     setError('');
     try {
       const parsedData = JSON.parse(jsonInput);
-      const res = await axios.post('https://your-backend-api.com/endpoint', parsedData);
+      const res = await axios.post('https://bajaj-api-abbas.onrender.com/', parsedData);
       setResponse(res.data);
     } catch (err) {
       setError('Invalid JSON or API error');
