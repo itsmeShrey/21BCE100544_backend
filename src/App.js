@@ -23,8 +23,10 @@ const App = () => {
     e.preventDefault();
     setError('');
     try {
+      console.log(jsonInput) ;
       const parsedData = JSON.parse(jsonInput);
-      const res = await axios.post('https://bajaj-api-abbas.onrender.com/bfhl', parsedData);
+
+      const res = await axios.post('https://bajaj-api-abbas.onrender.com/bfhl', {data:parsedData});
       setResponse(res.data);
     } catch (err) {
       setError('Invalid JSON or API error');
@@ -63,7 +65,7 @@ const App = () => {
     <div>
       <div className="section section-1">
         <div className="container">
-          <h1>JSON Processor UI</h1>
+          <h1>21BCE10544</h1>
           <form onSubmit={handleSubmit}>
             <textarea
               value={jsonInput}
